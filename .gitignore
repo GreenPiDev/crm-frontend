@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 
+.env
+
 # Test artifacts
 /test-results/
 /playwright-report/

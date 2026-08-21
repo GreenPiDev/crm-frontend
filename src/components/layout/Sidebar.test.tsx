@@ -14,6 +14,7 @@ function mockUser(enabledModules: string[]) {
       role: 'OWNER',
       enabledModules,
     },
+    isInitializing: false,
     login: vi.fn(),
     register: vi.fn(),
     logout: vi.fn(),

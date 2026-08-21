@@ -4,8 +4,12 @@ import { NAV_ITEMS, isModuleEnabled } from '@/lib/module-nav'
 import { Sidebar } from './Sidebar'
 
 export function ProtectedLayout() {
-  const { user } = useAuth()
+  const { user, isInitializing } = useAuth()
   const location = useLocation()
+
+  if (isInitializing) {
+    return null
+  }
 
   if (!user) {
     return <Navigate to="/giris" replace />
